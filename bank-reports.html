@@ -77,8 +77,8 @@
                             <td><span class="badge danger">رقم</span></td>
                             <td><span class="severity high">عالي</span></td>
                             <td>325</td>
-                            <td>11 مايو 2025 - 11:30 ص</td>
-                            <td>11 مايو 2025 - 01:15 م</td>
+                            <td>11 يونيو 2025 - 11:30 ص</td>
+                            <td>11 يونيو 2025 - 01:15 م</td>
                             <td><span class="status-pill warning">قيد المعالجة</span></td>
                             <td><button class="action-btn-view">🔍 عرض التفاصيل</button></td>
                         </tr>
@@ -87,8 +87,8 @@
                             <td><span class="badge danger">رابط</span></td>
                             <td><span class="severity high">عالي</span></td>
                             <td>289</td>
-                            <td>10 مايو 2025 - 09:20 ص</td>
-                            <td>11 مايو 2025 - 10:50 ص</td>
+                            <td>10 يونيو 2025 - 09:20 ص</td>
+                            <td>11 يونيو 2025 - 10:50 ص</td>
                             <td><span class="status-pill danger">جديدة</span></td>
                             <td><button class="action-btn-view">🔍 عرض التفاصيل</button></td>
                         </tr>
@@ -119,13 +119,12 @@
     </div>
 
     <script>
-        // دالة انتقال لصفحة تفاصيل البلاغ مع تخزين الهدف
+        // انتقال لصفحة تفاصيل البلاغ 
         function goToDetail(entity) {
             localStorage.setItem('selectedReportEntity', entity);
             window.location.href = 'bank-report-details.html';
         }
 
-        // سحب البلاغات المدخلة ديناميكياً من واجهة العميل (إذا تم تقديمها)
         window.addEventListener('DOMContentLoaded', () => {
             const dynamicReports = JSON.parse(localStorage.getItem('submittedReports') || '[]');
             const tableBody = document.getElementById('reportsTableBody');
@@ -143,7 +142,7 @@
                     <td><span class="status-pill danger">جديدة</span></td>
                     <td><button class="action-btn-view">🔍 عرض التفاصيل</button></td>
                 `;
-                tableBody.insertBefore(tr, tableBody.firstChild); // إضافة البلاغات الجديدة بالأعلى
+                tableBody.insertBefore(tr, tableBody.firstChild); 
             });
         });
     </script>

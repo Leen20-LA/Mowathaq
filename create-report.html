@@ -32,7 +32,7 @@
             background-color: var(--card-bg);
             border: 2px solid var(--border-color);
             padding: 30px;
-            border-radius: 24px; /* زوايا دائرية مريحة للعين */
+            border-radius: 24px; 
             width: 100%;
             max-width: 480px;
             box-shadow: 0 8px 24px rgba(45, 106, 79, 0.08);
@@ -87,7 +87,7 @@
             border: 2px solid var(--border-color);
             color: var(--text-dark);
             padding: 15px;
-            padding-left: 55px; /* ترك مساحة لزر المايك */
+            padding-left: 55px; 
             border-radius: 14px;
             outline: none;
             font-size: 16px;
@@ -105,7 +105,7 @@
             resize: none;
         }
 
-        /* زر الإدخال الصوتي - ميسر وواضح لكبار السن */
+        /* زر الإدخال الصوتي */
         .speech-btn {
             position: absolute;
             left: 12px;
@@ -255,7 +255,6 @@
             recognition.onresult = function(event) {
                 const voiceText = event.results[0][0].transcript;
                 if (targetId === 'suspectInput') {
-                    // إزالة المسافات تلقائياً إذا تم إدخال رقم هاتف بالصوت
                     targetInput.value = voiceText.replace(/\s+/g, '');
                 } else {
                     targetInput.value = voiceText;
@@ -283,10 +282,8 @@
 
             if (!suspectValue) return;
 
-            // تحديد النوع تلقائياً
             const type = (suspectValue.includes('.') || suspectValue.includes('http')) ? 'رابط' : 'رقم';
 
-            // تخزين البلاغ محلياً
             const existingReports = JSON.parse(localStorage.getItem('submittedReports') || '[]');
             existingReports.push({
                 text: suspectValue,
@@ -297,7 +294,6 @@
 
             localStorage.setItem('submittedReports', JSON.stringify(existingReports));
 
-            // عرض تنبيه النجاح للمستخدم
             const successAlert = document.getElementById('successAlert');
             successAlert.style.display = 'block';
 

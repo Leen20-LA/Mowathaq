@@ -1,11 +1,11 @@
 :root {
-    --bg-dark-deep: #0a1118;      /* الخلفية الكلية الداكنة جداً */
-    --bg-dark-card: #101e2c;      /* خلفية الكروت والقائمة الجانبية */
-    --accent-blue: #007bff;       /* اللون الأزرق المضيء المؤشر */
-    --accent-gold: #b38f4f;       /* اللون الذهبي/البرونزي المعتمد للإنماء */
-    --border-color: #1d2d44;      /* لون الحدود الفاصلة */
-    --text-main: #f0f4f8;         /* النص الرئيسي الفاتح */
-    --text-muted: #8fa0b5;        /* النصوص الجانبية الباهتة */
+    --bg-dark-deep: #0a1118;      
+    --bg-dark-card: #101e2c;      
+    --accent-blue: #007bff;       
+    --accent-gold: #b38f4f;      
+    --border-color: #1d2d44;      
+    --text-main: #f0f4f8;         
+    --text-muted: #8fa0b5;        
     
     /* ألوان دلالية */
     --color-danger: #ef4444;
@@ -97,7 +97,7 @@ body {
     border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px;
 }
 
-/* كروت المؤشرات */
+/* المؤشرات */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -122,7 +122,7 @@ body {
 .trend.up { color: var(--color-success); }
 .trend.down { color: var(--color-danger); }
 
-/* الرسوم الجرافيكية */
+/* الرسوم */
 .visuals-section {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -142,7 +142,7 @@ body {
     padding: 8px 12px; border-radius: 6px; font-size: 12px; outline: none;
 }
 
-/* قائمة الأكثر إبلاغاً */
+/* قائمة اعلى البلاغات */
 .top-reported-list { list-style: none; display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px;}
 .top-reported-list li {
     display: flex; align-items: center; justify-content: space-between;
@@ -214,7 +214,7 @@ body {
 .btn-secondary { background: var(--border-color); color: var(--text-main); border: 1px solid var(--border-color); padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; }
 .btn-danger { background: #ef444422; color: var(--color-danger); border: 1px solid #ef444444; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; }
 
-/* مساحة كتابة الملاحظات */
+/* مساحة كتابة  */
 .notes-section h4 { font-size: 14px; margin-bottom: 10px; color: var(--text-muted); }
 .note-textarea { width: 100%; height: 80px; background: var(--bg-dark-deep); border: 1px solid var(--border-color); color: white; border-radius: 8px; padding: 10px; outline: none; margin-bottom: 10px; resize: none; }
 
@@ -227,7 +227,7 @@ body {
 .recent-logs { list-style: none; display: flex; flex-direction: column; gap: 12px; }
 .recent-logs li { background: var(--bg-dark-deep); padding: 12px; border-radius: 8px; font-size: 13px; color: var(--text-muted); border-right: 3px solid var(--color-info); }
 
-/* مودال */
+
 .modal { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 1000; }
 .modal-content { background: var(--bg-dark-card); border: 1px solid var(--border-color); padding: 30px; border-radius: 16px; width: 450px; }
 .modal-content h3 { margin-bottom: 15px; color: var(--accent-gold); }
@@ -235,7 +235,7 @@ body {
 .action-buttons-row { display: flex; gap: 10px; margin-top: 20px; }
 .action-buttons-row button { flex: 1; }
 
-/* تقارير دائرية */
+/* تقارير  */
 .threat-percentage-row { margin-bottom: 15px; }
 .percentage-info { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 5px; }
 .p-bar { background: var(--bg-dark-deep); height: 8px; border-radius: 4px; overflow: hidden; }

@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #5A2022; /* لون الهوية */
+    --primary-color: #5A2022; 
     --primary-light: #7A2E31;
     --bg-color: #F9F7F4;
     --white: #FFFFFF;
@@ -72,7 +72,7 @@ body {
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* --- الحاوية الأساسية --- */
+
 .page-section {
     max-width: 1200px;
     margin: 40px auto;
@@ -81,7 +81,7 @@ body {
 }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* --- الرئيسية (Hero) --- */
+/* --- الرئيسية --- */
 .hero { text-align: center; margin-bottom: 50px; }
 .hero h1 { font-size: 36px; color: var(--primary-color); margin-bottom: 15px; }
 .hero p { color: var(--text-gray); font-size: 18px; margin-bottom: 30px; }
@@ -151,7 +151,7 @@ body {
 .empty-state { padding: 50px 20px; }
 
 .gauge-container { margin: 20px 0; }
-/* --- إعدادات العداد الدائري (من النموذج الأولي) --- */
+/* --- إعدادات العداد الدائري --- */
 .gauge-section {
     margin: 20px 0 30px;
 }

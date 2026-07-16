@@ -1,8 +1,7 @@
 // ================= القواعد المنطقية (مخصصة لمحصّن) =================
 const validCodes = ["A10203", "B55443", "QR9988"]; 
-const fearWords = ["ايقاف","إيقاف","حظر","عاجل","آخر مهلة","فورا"];
-// كود التحقق
-const sensitiveDataWords = ["رقم الهوية","رقم الحساب","الرقم السري","كود التحقق","cvv","كلمة المرور"];
+const fearWords = ["ايقاف","إيقاف","حظر","عاجل","آخر مهلة","فورا","مستعجل","تنبيه","تحذير","تنبيه","ارسل"];
+const sensitiveDataWords = ["رقم الهوية","رقم الحساب","الرقم السري","ارسل","cvv","كلمة المرور"];
 const officialDomains = ["alinma.com", "alinma.sa"]; 
 const suspiciousShorteners = ["bit.ly","tinyurl","t.co","goo.gl","cutt.ly"];
 
