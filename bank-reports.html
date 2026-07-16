@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حصّين | مركز البلاغات</title>
+    <link rel="stylesheet" href="bank-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- القائمة الجانبية -->
+        <aside class="sidebar">
+            <div class="bank-logo">
+                <span class="logo-icon">🛡️</span>
+                <div class="logo-text">
+                    <strong>حصّين الإنماء</strong>
+                    <span>alinma bank</span>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="bank-dashboard.html">📊 الرئيسية</a></li>
+                <li><a href="bank-messages.html">✉️ الرسائل البنكية</a></li>
+                <li class="active"><a href="bank-reports.html">🚨 البلاغات الجديدة</a></li>
+                <li><a href="bank-analytics.html">📈 التقارير والتحليلات</a></li>
+                <li><a href="#">🔍 قاعدة التهديدات</a></li>
+                <li><a href="#">👥 المستخدمين</a></li>
+                <li><a href="#">⚙️ الإعدادات</a></li>
+                <li><a href="#">📜 سجل العمليات</a></li>
+                <li><a href="#">🛠️ الدعم الفني</a></li>
+            </ul>
+        </aside>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="main-viewport">
+            <header class="top-header">
+                <div class="welcome-text">
+                    <h2>مركز البلاغات</h2>
+                    <p>فرز ومعالجة البلاغات الواردة من العملاء والأنظمة</p>
+                </div>
+            </header>
+
+            <!-- فلاتر البحث والفرز -->
+            <section class="filters-bar">
+                <div class="tabs">
+                    <button class="tab-btn active">الكل</button>
+                    <button class="tab-btn">جديدة</button>
+                    <button class="tab-btn">قيد المعالجة</button>
+                    <button class="tab-btn">تم التعامل معها</button>
+                    <button class="tab-btn">مرفوضة</button>
+                </div>
+                <div class="search-actions">
+                    <input type="text" class="search-input" placeholder="بحث عن بلاغ...">
+                    <select class="dropdown-filter"><option>كل الأقسام</option></select>
+                </div>
+            </section>
+
+            <!-- جدول البلاغات الواردة -->
+            <section class="table-container">
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>الرقم / الرابط</th>
+                            <th>نوع البلاغ</th>
+                            <th>مستوى الخطورة</th>
+                            <th>عدد البلاغات</th>
+                            <th>أول بلاغ</th>
+                            <th>آخر بلاغ</th>
+                            <th>الحالة</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportsTableBody">
+                        <!-- صفوف ثابتة من التصميم المرفق -->
+                        <tr onclick="goToDetail('+966 50 123 4567')">
+                            <td class="bold-text">+966 50 123 4567</td>
+                            <td><span class="badge danger">رقم</span></td>
+                            <td><span class="severity high">عالي</span></td>
+                            <td>325</td>
+                            <td>11 مايو 2025 - 11:30 ص</td>
+                            <td>11 مايو 2025 - 01:15 م</td>
+                            <td><span class="status-pill warning">قيد المعالجة</span></td>
+                            <td><button class="action-btn-view">🔍 عرض التفاصيل</button></td>
+                        </tr>
+                        <tr onclick="goToDetail('bit.ly/xyz123')">
+                            <td class="bold-text">bit.ly/xyz123</td>
+                            <td><span class="badge danger">رابط</span></td>
+                            <td><span class="severity high">عالي</span></td>
+                            <td>289</td>
+                            <td>10 مايو 2025 - 09:20 ص</td>
+                            <td>11 مايو 2025 - 10:50 ص</td>
+                            <td><span class="status-pill danger">جديدة</span></td>
+                            <td><button class="action-btn-view">🔍 عرض التفاصيل</button></td>
+                        </tr>
+                        <tr onclick="goToDetail('+966 11 987 6543')">
+                            <td class="bold-text">+966 11 987 6543</td>
+                            <td><span class="badge danger">رقم</span></td>
+                            <td><span class="severity medium">متوسط</span></td>
+                            <td>150</td>
+                            <td>10 مايو 2025 - 08:10 ص</td>
+                            <td>10 مايو 2025 - 03:15 م</td>
+                            <td><span class="status-pill danger">جديدة</span></td>
+                            <td><button class="action-btn-view">🔍 عرض التفاصيل</button></td>
+                        </tr>
+                        <tr onclick="goToDetail('secure-update.com')">
+                            <td class="bold-text">secure-update.com</td>
+                            <td><span class="badge danger">رابط</span></td>
+                            <td><span class="severity medium">متوسط</span></td>
+                            <td>120</td>
+                            <td>9 مايو 2025 - 07:00 م</td>
+                            <td>10 مايو 2025 - 02:30 م</td>
+                            <td><span class="status-pill success">تم التعامل معها</span></td>
+                            <td><button class="action-btn-view">🔍 عرض التفاصيل</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // دالة انتقال لصفحة تفاصيل البلاغ مع تخزين الهدف
+        function goToDetail(entity) {
+            localStorage.setItem('selectedReportEntity', entity);
+            window.location.href = 'bank-report-details.html';
+        }
+
+        // سحب البلاغات المدخلة ديناميكياً من واجهة العميل (إذا تم تقديمها)
+        window.addEventListener('DOMContentLoaded', () => {
+            const dynamicReports = JSON.parse(localStorage.getItem('submittedReports') || '[]');
+            const tableBody = document.getElementById('reportsTableBody');
+            
+            dynamicReports.forEach(rep => {
+                const tr = document.createElement('tr');
+                tr.onclick = () => goToDetail(rep.text);
+                tr.innerHTML = `
+                    <td class="bold-text">${rep.text}</td>
+                    <td><span class="badge danger">${rep.type}</span></td>
+                    <td><span class="severity high">عالي</span></td>
+                    <td>1</td>
+                    <td>اليوم - الآن</td>
+                    <td>اليوم - الآن</td>
+                    <td><span class="status-pill danger">جديدة</span></td>
+                    <td><button class="action-btn-view">🔍 عرض التفاصيل</button></td>
+                `;
+                tableBody.insertBefore(tr, tableBody.firstChild); // إضافة البلاغات الجديدة بالأعلى
+            });
+        });
+    </script>
+</body>
+</html>

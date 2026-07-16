@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حصّين | التقارير والتحليلات</title>
+    <link rel="stylesheet" href="bank-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- القائمة الجانبية -->
+        <aside class="sidebar">
+            <div class="bank-logo">
+                <span class="logo-icon">🛡️</span>
+                <div class="logo-text">
+                    <strong>حصّين الإنماء</strong>
+                    <span>alinma bank</span>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="bank-dashboard.html">📊 الرئيسية</a></li>
+                <li><a href="bank-messages.html">✉️ الرسائل البنكية</a></li>
+                <li><a href="bank-reports.html">🚨 البلاغات الجديدة</a></li>
+                <li class="active"><a href="bank-analytics.html">📈 التقارير والتحليلات</a></li>
+                <li><a href="#">🔍 قاعدة التهديدات</a></li>
+                <li><a href="#">👥 المستخدمين</a></li>
+                <li><a href="#">⚙️ الإعدادات</a></li>
+                <li><a href="#">📜 سجل العمليات</a></li>
+                <li><a href="#">🛠️ الدعم الفني</a></li>
+            </ul>
+        </aside>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="main-viewport">
+            <header class="top-header">
+                <div class="welcome-text">
+                    <h2>التقارير والتحليلات</h2>
+                    <p>الفترة من 05 مايو 2025 إلى 11 مايو</p>
+                </div>
+                <button class="btn-primary-dark" onclick="alert('جاري تصدير التقرير بصيغة PDF...')">📥 تصدير تقرير</button>
+            </header>
+
+            <!-- التبويبات الداخلية للتقارير -->
+            <section class="filters-bar" style="margin-bottom: 25px;">
+                <div class="tabs">
+                    <button class="tab-btn active">نظرة عامة</button>
+                    <button class="tab-btn">نوع التهديد</button>
+                    <button class="tab-btn">المناطق</button>
+                    <button class="tab-btn">الأوقات</button>
+                </div>
+            </section>
+
+            <!-- كروت التحليل -->
+            <section class="stats-grid" style="margin-bottom: 30px;">
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>1,102</h3>
+                        <p>إجمالي البلاغات</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>78%</h3>
+                        <p>نسبة معالجة البلاغات</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>4</h3>
+                        <p>التهديدات النشطة</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="visuals-section">
+                <!-- رسم أعمدة بيانية للبلاغات اليومية -->
+                <div class="visual-card">
+                    <h3>البلاغات اليومية</h3>
+                    <div class="chart-container" style="margin-top: 20px;">
+                        <svg viewBox="0 0 500 200" style="width: 100%; height: 220px;">
+                            <line x1="40" y1="20" x2="480" y2="20" stroke="#1d2d44" />
+                            <line x1="40" y1="70" x2="480" y2="70" stroke="#1d2d44" />
+                            <line x1="40" y1="120" x2="480" y2="120" stroke="#1d2d44" />
+                            <line x1="40" y1="170" x2="480" y2="170" stroke="#1d2d44" />
+
+                            <text x="15" y="25" fill="#6c7d93" font-size="10">300</text>
+                            <text x="15" y="75" fill="#6c7d93" font-size="10">200</text>
+                            <text x="15" y="125" fill="#6c7d93" font-size="10">100</text>
+                            <text x="15" y="175" fill="#6c7d93" font-size="10">0</text>
+
+                            <!-- الأعمدة البيانية (مطابقة للصورة المرفقة) -->
+                            <rect x="55" y="70" width="30" height="100" rx="3" fill="#007bff" />
+                            <rect x="115" y="85" width="30" height="85" rx="3" fill="#007bff" />
+                            <rect x="175" y="60" width="30" height="110" rx="3" fill="#007bff" />
+                            <rect x="235" y="90" width="30" height="80" rx="3" fill="#007bff" />
+                            <rect x="295" y="70" width="30" height="100" rx="3" fill="#007bff" />
+                            <rect x="355" y="35" width="30" height="135" rx="3" fill="#007bff" />
+                            <rect x="415" y="20" width="30" height="150" rx="3" fill="#007bff" />
+
+                            <!-- نصوص التواريخ -->
+                            <text x="70" y="190" fill="#6c7d93" font-size="9" text-anchor="middle">5 مايو</text>
+                            <text x="130" y="190" fill="#6c7d93" font-size="9" text-anchor="middle">6 مايو</text>
+                            <text x="190" y="190" fill="#6c7d93" font-size="9" text-anchor="middle">7 مايو</text>
+                            <text x="250" y="190" fill="#6c7d93" font-size="9" text-anchor="middle">8 مايو</text>
+                            <text x="310" y="190" fill="#6c7d93" font-size="9" text-anchor="middle">9 مايو</text>
+                            <text x="370" y="190" fill="#6c7d93" font-size="9" text-anchor="middle">10 مايو</text>
+                            <text x="430" y="190" fill="#6c7d93" font-size="9" text-anchor="middle">11 مايو</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- توزيع أنواع التهديدات -->
+                <div class="visual-card">
+                    <h3>توزيع أنواع التهديدات</h3>
+                    <div class="pie-equivalent-list" style="margin-top: 20px;">
+                        <div class="threat-percentage-row">
+                            <div class="percentage-info">
+                                <span>روابط خبيثة</span>
+                                <strong>45%</strong>
+                            </div>
+                            <div class="p-bar"><div class="p-fill danger" style="width: 45%;"></div></div>
+                        </div>
+                        <div class="threat-percentage-row">
+                            <div class="percentage-info">
+                                <span>أرقام احتيالية</span>
+                                <strong>30%</strong>
+                            </div>
+                            <div class="p-bar"><div class="p-fill warning" style="width: 30%;"></div></div>
+                        </div>
+                        <div class="threat-percentage-row">
+                            <div class="percentage-info">
+                                <span>تصيد بيانات</span>
+                                <strong>15%</strong>
+                            </div>
+                            <div class="p-bar"><div class="p-fill info" style="width: 15%;"></div></div>
+                        </div>
+                        <div class="threat-percentage-row">
+                            <div class="percentage-info">
+                                <span>برمجيات ضارة</span>
+                                <strong>10%</strong>
+                            </div>
+                            <div class="p-bar"><div class="p-fill success" style="width: 10%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
