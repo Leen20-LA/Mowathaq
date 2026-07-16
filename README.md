@@ -1,22 +1,40 @@
-# Mowathaq
+# مشروع موثق (Mowathaq)
 
-## Project Roadmap
+تطبيق ويب تفاعلي ذكي يهدف لحماية المستخدمين وكبار السن من مخاطر الرسائل الاحتيالية والهجمات السيبرانية من خلال واجهة مستخدم ميسرة، ونظام ذكي للتحقق من مصداقية الرسائل، ولوحة تحكم لحظية للقطاع البنكي للحد من العمليات المشبوهة.
 
-### Phase 1: Hackathon امد (Current Stage)
-* Developed a responsive web interface with separate functional pages.
-* Implemented a local rule-based algorithm to detect suspicious links and text patterns.
-* Integrated Voice Input and Text-to-Speech features to assist elderly users.
-* Applied local session storage to guarantee user data privacy.
+---
 
-### Phase 2: Integration & Expansion (Short-Term)
-* Connect the system with official bank APIs to validate active verification codes.
-* Deploy a central database to store and track public fraud reports.
-* Refine the user interface based on feedback from elderly testers.
+## المميزات الرئيسية للمشروع
 
-### Phase 3: Smart Upgrades (Mid-Term)
-* Upgrade keyword matching to a local Arabic NLP model for better text analysis.
-* Launch a WhatsApp and Telegram bot for easier message forwarding.
-* Develop a browser extension to alert users about phishing links in real-time.
+### 1. واجهة العميل (تطبيق موثق)
+* **تيسير الوصول والدعم الصوتي (Accessibility):** دعم كامل للتحكم الصوتي والنطق (Speech-to-Text) لتمكين كبار السن من رفع بلاغاتهم بمجرد التحدث للميكروفون دون الحاجة للكتابة اليدوية.
+* **واجهة ميسرة:** ألوان هادئة وواجهات واضحة تعكس الطمأنينة وتوفر تجربة مستخدم خالية من التعقيد تناسب كافة الفئات العمرية.
+* **التعرف التلقائي:** تصنيف البلاغات المدخلة تلقائياً إلى (رقم هاتف مشبوه) أو (رابط احتيالي).
 
-### Phase 4: Full Scalability (Long-Term)
-* Implement a private, on-premise AI model to analyze complex fraud patterns securely.
+### 2. لوحة تحكم إدارة الأمن السيبراني بالبنك
+* **التكامل اللحظي:** ترتبط لوحة تحكم البنك تلقائياً بالبلاغات التي يرسلها المستخدمون عبر المتصفح باستخدام التخزين المحلي التفاعلي (localStorage).
+* **مراقبة البيانات الحية:** استعراض إحصائيات فورية، فحص الرسائل المعتمدة، وإجراءات سريعة لحظر وحماية العملاء.
+
+---
+
+## التقنيات المستخدمة
+* **واجهات المستخدم:** HTML5, CSS3 باستخدام التصميم المتجاوب (Responsive Design)
+* **لغة البرمجة والتفاعل:** JavaScript (ES6+)
+* **ميزات المتصفح الأساسية:**
+  * **Web Speech API:** للتعرف اللفظي وتحويل الصوت إلى نصوص بدقة داخل المتصفح.
+  * **Local Storage:** لمزامنة وتخزين بيانات البلاغات بين واجهة المستخدم ولوحة تحكم البنك بشكل تفاعلي ومباشر.
+
+---
+
+## ههيكلية ملفات المشروع
+
+يتكون المشروع من 14 ملفاً تم تنظيمها لتربط واجهة العميل بلوحة تحكم البنك:
+
+```text
+├── index.html               # واجهة تطبيق موثق للعميل (الرئيسية)
+├── create-report.html       # صفحة العميل الميسرة لإنشاء البلاغات وتدعم الإدخال الصوتي
+├── bank-dashboard.html      # لوحة التحكم الرئيسية لمشرفي البنك
+├── bank-reports.html        # صفحة استعراض البلاغات الجديدة الواردة من المستخدمين
+├── bank-messages.html       # صفحة إدارة الرسائل البنكية الموثقة والمعتمدة
+├── bank-analytics.html      # شاشة التقارير والرسومات الإحصائية لتحليل المخاطر
+└── bank-style.css           # ملف التنسيق الموحد والداكن للوحة تحكم البنك
